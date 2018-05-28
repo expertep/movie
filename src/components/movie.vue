@@ -32,7 +32,8 @@
       </div>
     </section>
     <section class="hero" v-else>
-      <div class="hero-body">
+      <div class="bg" v-bind:style="{ 'background-image': 'url(' + movie.img + ')' }"></div>
+      <div class="hero-body conten">
         <div class="columns">
           <div class="column">
             <br>
@@ -489,5 +490,32 @@ img.poster:hover {
 }
 .td {
   padding:5px;
+}
+.bg {
+    position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  display: block;
+  /*background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');*/
+  background-size:cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.3;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+.conten{
+    position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 </style>
